@@ -22,7 +22,7 @@ public class BaseConfigs {
 		
 		Properties properties = new Properties();
 		
-		FileInputStream propFile = new FileInputStream("D:\\eclipse ide\\eclipse projects\\E2EFramework\\src\\main\\java\\base_configs\\propertyfile");
+		FileInputStream propFile = new FileInputStream("C:\\Users\\Sumit Chhetri\\git\\E2E_Framework_selenium\\src\\main\\java\\base_configs\\propertyfile");
 		
 		properties.load(propFile);		
 		
