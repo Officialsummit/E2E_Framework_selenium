@@ -10,17 +10,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseConfigs {
 	
-	public  WebDriver driver;
+	protected  WebDriver driver;
+	protected Properties properties;
 	
 	
 	public WebDriver initializeDriver() throws IOException {
 		
-		Properties properties = new Properties();
+		properties = new Properties();
 		
 		FileInputStream propFile = new FileInputStream("C:\\Users\\Sumit Chhetri\\git\\E2E_Framework_selenium\\src\\main\\java\\base_configs\\propertyfile");
 		
@@ -51,5 +54,12 @@ public class BaseConfigs {
 		
 		return driver;
 	}
+	@AfterMethod
+	private void tearDown() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.quit();
+
+	}
+	
 
 }
