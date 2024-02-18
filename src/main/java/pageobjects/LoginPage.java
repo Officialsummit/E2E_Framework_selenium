@@ -32,5 +32,12 @@ public class LoginPage {
 		public WebElement submitButton() {
 			return submitButton;
 		}
+		
+		@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
+		WebElement invalidWarning;
+		public WebElement invalidLogin() {
+			return invalidWarning;
+			
+		}
 
 }

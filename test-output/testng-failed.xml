@@ -5,8 +5,7 @@
     <classes>
       <class name="test_pages.LoginTest">
         <methods>
-          <include name="validateLogin"/>
-          <include name="tearDown"/>
+          <include name="validateLogin" invocation-numbers="1"/>
         </methods>
       </class> <!-- test_pages.LoginTest -->
     </classes>
